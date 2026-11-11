@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekle Maregn | Personal Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f8fc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: white;
+            padding: 20px 8%;
+            border-bottom: 1px solid #e7e9f1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #6558e8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #68738a;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #6558e8;
+        }
+
+        /* Home section */
+        .home {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            padding: 60px 8%;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            padding: 8px;
+            background: linear-gradient(135deg, #6558e8, #18a6a6);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            display: block;
+        }
+
+        .home-text h4 {
+            color: #6558e8;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .home-text h1 {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+
+        .home-text h1 span {
+            color: #6558e8;
+        }
+
+        .home-text h3 {
+            color: #6558e8;
+            margin-bottom: 15px;
+        }
+
+        .home-text p {
+            color: #68738a;
+            max-width: 500px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #6558e8;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #5144d4;
+        }
+
+        /* General sections */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            background-color: #f0f1fa;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 12px auto;
+            color: #68738a;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: white;
+            padding: 15px 25px;
+            border: 1px solid #e7e9f1;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        /* Hobbies */
+        .hobbies {
+            background-color: #f0f1fa;
+        }
+
+        .hobby-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .hobby {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e7e9f1;
+        }
+
+        .hobby h3 {
+            color: #6558e8;
+            margin-bottom: 10px;
+        }
+
+        .hobby p {
+            color: #68738a;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #171827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home {
+                flex-direction: column;
+                text-align: center;
+                gap: 35px;
+            }
+
+            .profile-image {
+                width: 230px;
+                height: 230px;
+            }
+
+            .home-text h1 {
+                font-size: 36px;
+            }
+
+            .hobby-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Tekle <span>Maregn.</span></div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+
+        <div class="profile-image">
+            <img src="myphoto.jpg" alt="Tekle Maregn">
+        </div>
+
+        <div class="home-text">
+            <h4>Welcome to my personal website</h4>
+
+            <h1>Hi, I'm <span>Tekle Maregn</span></h1>
+
+            <h3>Computer Science Student</h3>
+
+            <p>
+                I am a student who enjoys learning new things
+                and developing new skills. I am interested in
+                technology, computers, and web development.
+                My goal is to become a successful person through
+                hard work, dedication, and continuous learning.
+            </p>
+
+            <a href="#about" class="btn">Discover More</a>
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            Hello! My name is Tekle Maregn.
+            I enjoy learning about technology and discovering
+            how websites are created.
+        </p>
+
+        <p>
+            I believe in hard work, dedication,
+            and continuous learning.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2 class="section-title">My Computer Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Microsoft Word</div>
+            <div class="skill">Microsoft Excel</div>
+        </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section class="hobbies" id="hobbies">
+        <h2 class="section-title">My Hobbies</h2>
+
+        <div class="hobby-container">
+
+            <div class="hobby">
+                <h3>Watching Movies</h3>
+                <p>I enjoy watching movies and exploring stories.</p>
+            </div>
+
+            <div class="hobby">
+                <h3>Listening to Music</h3>
+                <p>I enjoy listening to different types of music.</p>
+            </div>
+
+            <div class="hobby">
+                <h3>Learning Computer Skills</h3>
+                <p>I enjoy learning new computer skills and technologies.</p>
+            </div>
+
+            <div class="hobby">
+                <h3>Playing Football</h3>
+                <p>I enjoy playing football and teamwork.</p>
+            </div>
+
+            <div class="hobby">
+                <h3>Video Editing</h3>
+                <p>I enjoy creating and editing videos.</p>
+            </div>
+
+            <div class="hobby">
+                <h3>Web Development</h3>
+                <p>I enjoy learning how websites are designed.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Thank You for Visiting!</h2>
+        <p>Welcome to my personal profile website.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Tekle Maregn. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
